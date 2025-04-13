@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Server Icon Fetcher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #000;
+            color: #fff;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+            color: #000;
+        }
+        input {
+            width: 300px;
+        }
+        img {
+            margin-top: 20px;
+            max-width: 200px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Discord Server Icon Fetcher</h1>
+    <p>Enter a Discord invite link to get the server icon:</p>
+    <input type="text" id="inviteLink" placeholder="discord.gg/your-invite" />
+    <button onclick="fetchServerIcon()">Fetch Icon</button>
+
+    <div id="result" style="display:none;">
+        <h3>Server Icon:</h3>
+        <img id="serverIcon" src="" alt="Server Icon">
+        <p id="iconLink"></p>
+    </div>
+
+    <script>
+        async function fetchServerIcon() {
+            const inviteLink = document.getElementById('inviteLink').value;
+            const inviteCode = inviteLink.split('/').pop();
+            
+            if (!inviteCode) {
+                alert("Please enter a valid Discord invite link.");
+                return;
+            }
+
+            try {
+                const response = await fetch(`https://discord.com/api/v10/invites/${inviteCode}?with_counts=true`);
+                const data = await response.json();
+
+                if (data.guild && data.guild.icon) {
+                    const iconHash = data.guild.icon;
+                    const guildId = data.guild.id;
+                    const iconURL = `https://cdn.discordapp.com/icons/${guildId}/${iconHash}.png`;
+
+                    document.getElementById('serverIcon').src = iconURL;
+                    document.getElementById('iconLink').textContent = iconURL;
+                    document.getElementById('result').style.display = 'block';
+                } else {
+                    alert("No icon found or invalid invite.");
+                }
+            } catch (error) {
+                console.error("Error fetching server icon:", error);
+                alert("Error fetching the server icon. Please check the invite link.");
+            }
+        }
+    </script>
+</body>
+</html>
