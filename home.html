@@ -4,432 +4,440 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CityPvP.DE - Offizielle Webseite">
-	<meta name="keywords" content="citybuild, oneblock, skyblock, olddays, freebuild, smp, survival, kreativ, hardcore, skypvp, spleef, tumble, pvp, arena, getdown, jumpdown, parkour, fastbridgen, onehit, bewerbungsphase offen, minecraft server sucht teammitglieder, mein eigener sever, supporter, moderator, admin, developer, java, builder, developen lernen, plugins programmieren, cloudnet, minecraft bauen lernen, pixelbiester, 1.8, team gesucht, cracked, download, mieten, plugins, bester server, freebuild, creative, erstellen ohne hamachi, bauen, kitpvp, nitrado, beitreten, kostenlos, kaufen, pvp, ip, beste server, 1.9, 1.10, 1.11, 1.12, minecraft servervorstellung, server vorstellung, server team gesucht, video, minecraft server vorstellung, youtuber rang bekommen, 100 abos, 50 abos, 150 abos, developer gesucht, supporter, builder, plugin, admins gesucht, owner gesucht, deutsch, 1.12.2, builder gesucht, spigotmc, papermc, purpurmc, fabricmc, premium, bungeecord, mori0, grafvillainous, sidcool, nzxter, server, vorstellung, download, by grafvillainous, workupload.com, workupload">
-	<meta property="og:description" content="CityPvP.DE - Offizielle Webseite">
-	<link rel="stylesheet" href="style.css">
-	<link rel="icon" href="/icons/favicon.ico">
-    <title>CityPvP.DE | Minecraft Server</title>
+    <meta name="keywords" content="citybuild, oneblock, skyblock, olddays, freebuild, smp, survival, kreativ, hardcore, skypvp, spleef, tumble, pvp, arena, getdown, jumpdown, parkour, fastbridgen, onehit, bewerbungsphase offen, minecraft server sucht teammitglieder, mein eigener sever, supporter, moderator, admin, developer, java, builder, developen lernen, plugins programmieren, cloudnet, minecraft bauen lernen, pixelbiester, 1.8, team gesucht, cracked, download, mieten, plugins, bester server, freebuild, creative, erstellen ohne hamachi, bauen, kitpvp, nitrado, beitreten, kostenlos, kaufen, pvp, ip, beste server, 1.9, 1.10, 1.11, 1.12, minecraft servervorstellung, server vorstellung, server team gesucht, video, minecraft server vorstellung, youtuber rang bekommen, 100 abos, 50 abos, 150 abos, developer gesucht, supporter, builder, plugin, admins gesucht, owner gesucht, deutsch, 1.12.2, builder gesucht, spigotmc, papermc, purpurmc, fabricmc, premium, bungeecord, mori0, grafvillainous, sidcool, nzxter, server, vorstellung, download, by grafvillainous, workupload.com, workupload">
+    <meta property="og:description" content="CityPvP.DE - Offizielle Webseite">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/icons/favicon.ico">
 </head>
 
 <body>
     <canvas id="glCanvas"></canvas>
-    <header>
-        <h1>CityPvP.DE</h1>
-        <nav>
-            <div class="dropdown">
-                <a href="" aria-haspopup="true" aria-expanded="false">🛠️Tools</a>
-                <div class="dropdown-content" role="menu">
-                    <a href="https://notube.cc/" target="_blank" rel="noopener noreferrer" role="menuitem">YouTube MP4/MP3 Downloader</a>
-                    <a href="https://citypvp.github.io/tools/dcdl.html" target="_blank" rel="noopener noreferrer" role="menuitem">Discord Server Icon Downloader</a>
-                    <a href="https://www.chunker.app/" target="_blank" rel="noopener noreferrer" role="menuitem">Minecraft World Converter</a>
+    <div id="overlay">
+        <div id="overlay-text">Hier Klicken!</div>
+    </div>
+    <div id="main-content" class="hidden">
+        <audio id="background-music" autoplay loop>
+            <source src="https://www.salimbeti.com/paperinik/musicapk/tales.mp3" type="audio/mpeg">
+            Die Hintergrundmusik wird von deinem Browser nicht unterstützt!
+        </audio>
+        <header>
+            <h1>CityPvP.DE</h1>
+            <nav>
+                <div class="dropdown">
+                    <a href="" aria-haspopup="true" aria-expanded="false">🛠️Tools</a>
+                    <div class="dropdown-content" role="menu">
+                        <a href="https://notube.cc/" target="_blank" rel="noopener noreferrer" role="menuitem">YouTube MP4/MP3 Downloader</a>
+                        <a href="https://citypvp.github.io/tools/discordsrv-icon-downloader.html" target="_blank" rel="noopener noreferrer" role="menuitem">Discord Server Icon Downloader</a>
+                        <a href="https://www.chunker.app/" target="_blank" rel="noopener noreferrer" role="menuitem">Minecraft World Converter</a>
+                    </div>
                 </div>
-            </div>
-            <div class="dropdown">
-                <a href="" aria-haspopup="true" aria-expanded="false">📥Downloads</a>
-                <div class="dropdown-content" role="menu">
-                    <a href="#femcraft" onclick="openSection('femcraft')" role="menuitem">FemCraft</a>
-                    <a href="#clients" onclick="openSection('clients')" role="menuitem">Clients</a>
-                    <a href="#plugins" onclick="openSection('plugins')" role="menuitem">Plugins</a>
-                    <a href="#maps" onclick="openSection('maps')" role="menuitem">Maps</a>
-                    <a href="#tools" onclick="openSection('tools')" role="menuitem">Tools</a>
-                    <a href="#collections" onclick="openSection('collections')" role="menuitem">Collections</a>
-                    <a href="#misc" onclick="openSection('misc')" role="menuitem">Misc</a>
-                    <a href="#server-templates" onclick="openSection('server-templates')" role="menuitem">Server Templates</a>
-                    <a href="#resource-packs" onclick="openSection('resource-packs')" role="menuitem">Resource Packs</a>
+                <div class="dropdown">
+                    <a href="" aria-haspopup="true" aria-expanded="false">📥Downloads</a>
+                    <div class="dropdown-content" role="menu">
+                        <a href="#femcraft" onclick="openSection('femcraft')" role="menuitem">FemCraft</a>
+                        <a href="#clients" onclick="openSection('clients')" role="menuitem">Clients</a>
+                        <a href="#plugins" onclick="openSection('plugins')" role="menuitem">Plugins</a>
+                        <a href="#maps" onclick="openSection('maps')" role="menuitem">Maps</a>
+                        <a href="#tools" onclick="openSection('tools')" role="menuitem">Tools</a>
+                        <a href="#collections" onclick="openSection('collections')" role="menuitem">Collections</a>
+                        <a href="#misc" onclick="openSection('misc')" role="menuitem">Misc</a>
+                        <a href="#server-templates" onclick="openSection('server-templates')" role="menuitem">Server Templates</a>
+                        <a href="#resource-packs" onclick="openSection('resource-packs')" role="menuitem">Resource Packs</a>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
-    
-    <div class="main-container">
-        <section id="home" class="section active">            
-            <div class="server-info">
-                <div class="ip-container">
-                    <p><strong>Java Edition:</strong><br>
-                    IP: CityPvP.DE<br>
-                    Port: 25565 (Standard)</p>
-                
-                    <p><strong>Bedrock Edition:</strong><br>
-                    IP: PE.CityPvP.DE<br>
-                    Port: 19490</p>
-                </div>
-            <div class="social-links">
-                <div class="icon-container">
-                    <a href="https://guns.lol/citypvp" target="_blank" rel="noopener noreferrer" class="social-icon" title="Social Media">
-                        <img src="./icons/chain.png" alt="Social Media" style="width: 32px; height: 32px;" />
-                    </a>
+            </nav>
+        </header>
         
-                    <a href="https://datal.processor.eux/cp/donate/citypvp" target="_blank" rel="noopener noreferrer" class="social-icon" title="Spenden">
-                        <img src="./icons/donation.png" alt="Spenden" style="width: 32px; height: 32px;" />
-                    </a>
-        
-                    <a href="https://discord.gg/citypvp-ds-survival-minigames-797188068347740160" target="_blank" rel="noopener noreferrer" class="social-icon" title="Discord">
-                        <img src="./icons/discord.png" alt="Discord" style="width: 32px; height: 32px;" />
-                    </a>
+        <div class="main-container">
+            <section id="home" class="section active">            
+                <div class="server-info">
+                    <div class="ip-container">
+                        <p><strong>Java Edition:</strong><br>
+                        IP: CityPvP.DE<br>
+                        Port: 25565 (Standard)</p>
+                    
+                        <p><strong>Bedrock Edition:</strong><br>
+                        IP: PE.CityPvP.DE<br>
+                        Port: 19490</p>
+                    </div>
+                <div class="social-links">
+                    <div class="icon-container">
+                        <a href="https://guns.lol/citypvp" target="_blank" rel="noopener noreferrer" class="social-icon" title="Social Media">
+                            <img src="./icons/chain.png" alt="Social Media" style="width: 32px; height: 32px;" />
+                        </a>
+            
+                        <a href="https://datalix.eu/cp/donate/citypvp" target="_blank" rel="noopener noreferrer" class="social-icon" title="Spenden">
+                            <img src="./icons/donation.png" alt="Spenden" style="width: 32px; height: 32px;" />
+                        </a>
+            
+                        <a href="https://discord.gg/citypvp-ds-survival-minigames-797188068347740160" target="_blank" rel="noopener noreferrer" class="social-icon" title="Discord">
+                            <img src="./icons/discord.png" alt="Discord" style="width: 32px; height: 32px;" />
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </section>
-		
-        <section id="femcraft" class="section">
-            <h2>FemCraft</h2>
-            <div class="download-container">
-                <div class="download-box">
-                    <a href="https://prismlauncher.org/" target="_blank" rel="noopener noreferrer">
-                        PrismLauncher 
-                    </a>
-                    <p class="description">
-                        An open-source Minecraft launcher with support for multiple instances, accounts, and mods.
-                    </p>
+            </section>
+            
+            <section id="femcraft" class="section">
+                <h2>FemCraft</h2>
+                <div class="download-container">
+                    <div class="download-box">
+                        <a href="https://prismlauncher.org/" target="_blank" rel="noopener noreferrer">
+                            PrismLauncher 
+                        </a>
+                        <p class="description">
+                            An open-source Minecraft launcher with support for multiple instances, accounts, and mods.
+                        </p>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://modrinth.com/modpack/femcraftclient" target="_blank" rel="noopener noreferrer">
+                            FemCraft Client
+                        </a>
+                        <p class="description">
+                            Survival & Utility Client with ViaLegacy, ViaBedrock, World Tools, and FPS improvements.
+                        </p>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://github.com/19MisterX98/SeedcrackerX" target="_blank" rel="noopener noreferrer">
+                            Seed Cracker 
+                        </a>
+                        <p class="description">
+                            Run around in the world until the mod finds a dungeon. After the mod found one the cracking process starts automatically. If it doesn't give you a world seed, you may need to find another dungeon.
+                        </p>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://github.com/emilyy-dev/bypass-resource-pack/releases" target="_blank" rel="noopener noreferrer">
+                            Bypass ResourcePacks 
+                        </a>
+                        <p class="description">
+                            Fabric mod to reject and bypass forced resource packs
+                        </p>
+                    </div>
                 </div>
-                <div class="download-box">
-                    <a href="https://modrinth.com/modpack/femcraftclient" target="_blank" rel="noopener noreferrer">
-                        FemCraft Client
-                    </a>
-                    <p class="description">
-                        Survival & Utility Client with ViaLegacy, ViaBedrock, World Tools, and FPS improvements.
-                    </p>
-                </div>
-                <div class="download-box">
-                    <a href="https://github.com/19MisterX98/SeedcrackerX" target="_blank" rel="noopener noreferrer">
-                        Seed Cracker 
-                    </a>
-                    <p class="description">
-                        Run around in the world until the mod finds a dungeon. After the mod found one the cracking process starts automatically. If it doesn't give you a world seed, you may need to find another dungeon.
-                    </p>
-                </div>
-                <div class="download-box">
-                    <a href="https://github.com/emilyy-dev/bypass-resource-pack/releases" target="_blank" rel="noopener noreferrer">
-                        Bypass ResourcePacks 
-                    </a>
-                    <p class="description">
-                        Fabric mod to reject and bypass forced resource packs
-                    </p>
-                </div>
-            </div>
-        </section>		
-		
-        <section id="clients" class="section">
-            <h2>Other Clients</h2>
-            <div class="download-container">
-                <div class="download-box">
-                    <a href="https://workupload.com/file/WmMMHdGFa2c" target="_blank" rel="noopener noreferrer">
-                        EaZy Client (MC 1.8.0) 
-                    </a>
-                    <p class="description">
-                        All EaZy Client versions + other tools from EaZyCode.
-                    </p>
-                </div>
-                <div class="download-box">
-                    <a href="https://www.blackspigot.com/downloads/sidcool-client-collection-deepcraft-meta-viaclient-leaked-by-ryugudev.31967/" target="_blank" rel="noopener noreferrer">
-                        SidCool Clients 
-                    </a>
-                    <p class="description">
-                        SidCool's trash skid clients (use at your own risk).
-                    </p>
-                </div>
-                <div class="download-box">
-                    <a href="https://workupload.com/file/ZddJ5vpQRcn" target="_blank" rel="noopener noreferrer">
-                        Garkolym Clients & Plugins (2016–2018) 
-                    </a>
-                    <p class="description">
-                        All clients & plugins by Garkolym.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section id="plugins" class="section">
-            <h2>Plugins</h2>
-            <div class="download-container">
-                <div class="download-box">
-                    <a href="https://modrinth.com/plugin/dcpings" target="_blank" rel="noopener noreferrer">
-                        Discord Pings
-                    </a>
-                    <p class="description">
-                        Pings just Like on Discord
-                    </p>
-                </div>
-                <div class="download-box">
-                    <a href="https://www.spigotmc.org/resources/logcleaner.123035/" target="_blank" rel="noopener noreferrer">
-                        LogCleaner
-                    </a>
-                    <p class="description">
-                        Delete old server logs and crash reports
-                    </p>
-                </div>
-                <div class="download-box">
-                    <a href="https://modrinth.com/plugin/entitymanager" target="_blank" rel="noopener noreferrer">
-                        EntityManager
-                    </a>
-                    <p class="description">
-                        Advanced Mob Control with Per World Whitelist/Blacklist System
-                    </p>
-                </div>
-                <div class="download-box">
-                    <a href="https://github.com/cymbycode/ProtocolSupport" target="_blank" rel="noopener noreferrer">
-                        ProtocolSupport (Shevchik)
-                    </a>
-                    <p class="description">
-                        Adds 1.4.7 - 1.6.4 clients support to your spigot 1.8 - 1.18.2 server
-                    </p>
-                </div>
-                <div class="download-box">
-                    <a href="https://workupload.com/file/v2BYUnHrJBf" target="_blank" rel="noopener noreferrer">
-                        Skript Pack for 1.8.8 Server
-                    </a>
-                    <p class="description">
-                        Skript for Minecraft 1.8 + Some Addons
-                    </p>
-                </div>
-            </div>
-        </section>
-		
-        <section id="maps" class="section">
-            <h2>Maps</h2>
-            <div class="download-container">
-                <div class="download-box">
-                    <a href="https://www.planetminecraft.com/project/minecraft-24w33a-railcannon/" target="_blank" rel="noopener noreferrer">
-                        Minecraft 24w33a Railcannon 
-                    </a>
-                    <p class="description">
-                        This map is based on an original version that was messy and confusing.
-                    </p>
-                </div>
-                <div class="download-box">
-                    <a href="https://www.planetminecraft.com/project/minecraft-block-vanisher/" target="_blank" rel="noopener noreferrer">
-                        Minecraft Block Vanisher 
-                    </a>
-                    <p class="description">
-                        This redstone contraption is inspired by CraftyMasterman's "block vanish" machine! Drop a block into the center and watch it magically disappear as pistons close in around it.
-                    </p>
-                </div>
-                <div class="download-box">
-                    <a href="https://www.planetminecraft.com/project/deutsche-minecraft-citygames-server-lobby-spawn/" target="_blank" rel="noopener noreferrer">
-                        CityGames Lobby (Small) 
-                    </a>
-                    <p class="description">
-                        A Small all in one Minecraft Server Lobby/Spawn (Magical Theme)
-                    </p>
-                </div>
-                <div class="download-box">
-                    <a href="https://www.planetminecraft.com/project/lgbtq-lobby/" target="_blank" rel="noopener noreferrer">
-                        CityGames Lobby (Large)
-                    </a>
-                    <p class="description">
-                        A Big all in one Minecraft Server Lobby/Spawn (Rainbow Theme)
-                    </p>
-                </div>
-                <div class="download-box">
-                    <a href="https://www.planetminecraft.com/project/download-totalbrutal-de-lobby-dezember-2017/" target="_blank" rel="noopener noreferrer">
-                        Totalbrutal.de Lobby (Dezember 2017)
-                    </a>
-                    <p class="description">
-                        Das ist die alte Lobby von Totalbrutal.de. Dieser Download ist vom Dezember 2017. Vielleicht werden ja einige von euch Nostalgisch?
-                    </p>
-                </div>
-            </div>
-        </section>
-		
-        <section id="tools" class="section">
-            <h2>Tools</h2>
-            <div class="download-container">
-                <div class="download-box">
-                    <a href="https://github.com/cymbycode/CleanUpBot/" target="_blank" rel="noopener noreferrer">
-                        CleanUpBot
-                    </a>
-                    <p class="description">
-                        Bans Idiots from your Discord Server
-                    </p>
-                </div>
-                <div class="download-box">
-                    <a href="https://gitlab.com/cymbycode/downloads/-/raw/main/JNDIExploit_v1.2.zip" target="_blank" rel="noopener noreferrer">
-                        JNDIExploit v1.2
-                    </a>
-                    <p class="description">
-                        JNDI Exploit (LOG4j)
-                    </p>
-                </div>
-                <div class="download-box">
-                    <a href="https://github.com/mori0/vanity-checker" target="_blank" rel="noopener noreferrer">
-                        Discord Vanity Checker
-                    </a>
-                    <p class="description">
-                        Discord vanity checker
-                    </p>
-                </div>
-                <div class="download-box">
-                    <a href="https://www.worldpainter.net/" target="_blank" rel="noopener noreferrer">
-                        WorldPainter
-                    </a>
-                    <p class="description">
-                        WorldPainter is an interactive map generator for Minecraft Java Edition. It allows you to "paint" landscapes using similar tools as a regular paint program. Sculpt and mould the terrain, paint materials, trees, snow and ice, etc. onto it, and much more.
-                    </p>
-                </div>
-                <div class="download-box">
-                    <a href="https://mega.nz/file/9bkFmSrL#EQE5k78h5HmuQTo0JIFKaenAB7EhCliHQ6rbgxWdt8Y" target="_blank" rel="noopener noreferrer">
-                        Snappy Driver Installer Origin R712 Driverpack 20052 - [CrackzSoft]
-                    </a>
-                    <p class="description">
-                        Use this if you are installing Old Windows Versions on Old Hardware
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section id="collections" class="section">
-            <h2>Collections</h2>
-            <div class="download-container">
-                <div class="download-box">
-                    <a href="https://workupload.com/file/4Pt4XaUgW93" target="_blank" rel="noopener noreferrer">
-                        Proxy Server Jars v7
-                    </a>
-                    <p class="description">
-                        Proxy & Server Jars Collection
-                    </p>
-                </div>
-                <div class="download-box">
-                    <a href="https://workupload.com/file/7X6QVzdfvnt" target="_blank" rel="noopener noreferrer">
-                        Crasher Collection
-                    </a>
-                    <p class="description">
-                        Collection of Old Outgame Crash Methods (Use at own Risk)
-                    </p>
-                </div>
-                <div class="download-box">
-                    <a href="https://mega.nz/folder/P0s21Bia#1Q35Ksde5KV6fvbcH2mHYA/folder/js8gXbAR" target="_blank" rel="noopener noreferrer">
-                        GrafVillainous Collection
-                    </a>
-                    <p class="description">
-                        All Old Clients, Plugins & Lost 1.8 Trash from My Past - Archive by EuGaming
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section id="misc" class="section">
-            <h2>Misc</h2>
-            <div class="download-container">
-                <div class="download-box">
-                    <a href="https://drive.google.com/drive/folders/19xgQm7LQxiDw5ApK9UHt5LzGdM9XmxEc" target="_blank" rel="noopener noreferrer">
-                        SoundPack
-                    </a>
-                </div>
-                <div class="download-box">
-                    <a href="https://workupload.com/file/XuPDLBQKA4h" target="_blank" rel="noopener noreferrer">
-                        Arkonius SoundPack
-                    </a>
-                </div>
-                <div class="download-box">
-                    <a href="https://codeload.github.com/cymbycode/Discord-Emojis-Stickers/zip/refs/heads/main"qrst="_blank" rel="noopener noreferrer">
-                        Discord Emojis & Stickers
-                    </a>
-                </div>
-                <div class="download-box">
-                    <a href="https://mega.nz/folder/rcVQ3KhL#Gxt6r9XE17oxjnVYsmFsFA" target="_blank" rel="noopener noreferrer">
-                        Beweise
-                    </a>
+            </section>		
+            
+            <section id="clients" class="section">
+                <h2>Other Clients</h2>
+                <div class="download-container">
+                    <div class="download-box">
+                        <a href="https://workupload.com/file/WmMMHdGFa2c" target="_blank" rel="noopener noreferrer">
+                            EaZy Client (MC 1.8.0) 
+                        </a>
+                        <p class="description">
+                            All EaZy Client versions + other tools from EaZyCode.
+                        </p>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://www.blackspigot.com/downloads/sidcool-client-collection-deepcraft-meta-viaclient-leaked-by-ryugudev.31967/" target="_blank" rel="noopener noreferrer">
+                            SidCool Clients 
+                        </a>
+                        <p class="description">
+                            SidCool's trash skid clients (use at your own risk).
+                        </p>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://workupload.com/file/ZddJ5vpQRcn" target="_blank" rel="noopener noreferrer">
+                            Garkolym Clients & Plugins (2016–2018) 
+                        </a>
+                        <p class="description">
+                            All clients & plugins by Garkolym.
+                        </p>
+                    </div>
                 </div>
             </section>
 
-        <section id="server-templates" class="section">
-            <h2>Server Templates</h2>
-            <div class="download-container">
-                <div class="download-box">
-                    <a href="https://www.mediafire.com/file/653zgsfrehwcecc/Enchanted_FreeBuild_Server_Template.zip/file" target="_blank" rel="noopener noreferrer">
-                        FreeBuild
-                    </a>
-                    <p class="description">
-                        German Enchanted FreeBuild Server Template based on 1.18.2 with 1.4.7 Backwards Support & Slimefun
-                    </p>
+            <section id="plugins" class="section">
+                <h2>Plugins</h2>
+                <div class="download-container">
+                    <div class="download-box">
+                        <a href="https://modrinth.com/plugin/dcpings" target="_blank" rel="noopener noreferrer">
+                            Discord Pings
+                        </a>
+                        <p class="description">
+                            Pings just Like on Discord
+                        </p>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://www.spigotmc.org/resources/logcleaner.123035/" target="_blank" rel="noopener noreferrer">
+                            LogCleaner
+                        </a>
+                        <p class="description">
+                            Delete old server logs and crash reports
+                        </p>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://modrinth.com/plugin/entitymanager" target="_blank" rel="noopener noreferrer">
+                            EntityManager
+                        </a>
+                        <p class="description">
+                            Advanced Mob Control with Per World Whitelist/Blacklist System
+                        </p>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://github.com/cymbycode/ProtocolSupport" target="_blank" rel="noopener noreferrer">
+                            ProtocolSupport (Shevchik)
+                        </a>
+                        <p class="description">
+                            Adds 1.4.7 - 1.6.4 clients support to your spigot 1.8 - 1.18.2 server
+                        </p>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://workupload.com/file/v2BYUnHrJBf" target="_blank" rel="noopener noreferrer">
+                            Skript Pack for 1.8.8 Server
+                        </a>
+                        <p class="description">
+                            Skript for Minecraft 1.8 + Some Addons
+                        </p>
+                    </div>
                 </div>
-                <div class="download-box">
-                    <a href="https://www.mediafire.com/file/7rkzf4vglp4j97s/GrieferGames-1.14.4.zip/file" target="_blank" rel="noopener noreferrer">
-                        GrieferGames
-                    </a>
-                    <p class="description">
-                        GrieferGames CB1 Server Template based on 1.14.4 with 1.4.7 Backwards Support
-                    </p>
+            </section>
+            
+            <section id="maps" class="section">
+                <h2>Maps</h2>
+                <div class="download-container">
+                    <div class="download-box">
+                        <a href="https://www.planetminecraft.com/project/minecraft-24w33a-railcannon/" target="_blank" rel="noopener noreferrer">
+                            Minecraft 24w33a Railcannon 
+                        </a>
+                        <p class="description">
+                            This map is based on an original version that was messy and confusing.
+                        </p>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://www.planetminecraft.com/project/minecraft-block-vanisher/" target="_blank" rel="noopener noreferrer">
+                            Minecraft Block Vanisher 
+                        </a>
+                        <p class="description">
+                            This redstone contraption is inspired by CraftyMasterman's "block vanish" machine! Drop a block into the center and watch it magically disappear as pistons close in around it.
+                        </p>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://www.planetminecraft.com/project/deutsche-minecraft-citygames-server-lobby-spawn/" target="_blank" rel="noopener noreferrer">
+                            CityGames Lobby (Small) 
+                        </a>
+                        <p class="description">
+                            A Small all in one Minecraft Server Lobby/Spawn (Magical Theme)
+                        </p>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://www.planetminecraft.com/project/lgbtq-lobby/" target="_blank" rel="noopener noreferrer">
+                            CityGames Lobby (Large)
+                        </a>
+                        <p class="description">
+                            A Big all in one Minecraft Server Lobby/Spawn (Rainbow Theme)
+                        </p>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://www.planetminecraft.com/project/download-totalbrutal-de-lobby-dezember-2017/" target="_blank" rel="noopener noreferrer">
+                            Totalbrutal.de Lobby (Dezember 2017)
+                        </a>
+                        <p class="description">
+                            Das ist die alte Lobby von Totalbrutal.de. Dieser Download ist vom Dezember 2017. Vielleicht werden ja einige von euch Nostalgisch?
+                        </p>
+                    </div>
                 </div>
-                <div class="download-box">
-                    <a href="https://www.mediafire.com/file/k6g63lnon8g5xb2/OldDays.zip/file" target="_blank" rel="noopener noreferrer">
-                        OldDays
-                    </a>
-                    <p class="description">
-                        A Server Template that aims to replicate all of Minecraft beta mechanics and gameplay.
-                    </p>
+            </section>
+            
+            <section id="tools" class="section">
+                <h2>Tools</h2>
+                <div class="download-container">
+                    <div class="download-box">
+                        <a href="https://github.com/cymbycode/CleanUpBot/" target="_blank" rel="noopener noreferrer">
+                            CleanUpBot
+                        </a>
+                        <p class="description">
+                            Bans Idiots from your Discord Server
+                        </p>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://gitlab.com/cymbycode/downloads/-/raw/main/JNDIExploit_v1.2.zip" target="_blank" rel="noopener noreferrer">
+                            JNDIExploit v1.2
+                        </a>
+                        <p class="description">
+                            JNDI Exploit (LOG4j)
+                        </p>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://github.com/mori0/vanity-checker" target="_blank" rel="noopener noreferrer">
+                            Discord Vanity Checker
+                        </a>
+                        <p class="description">
+                            Discord vanity checker
+                        </p>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://www.worldpainter.net/" target="_blank" rel="noopener noreferrer">
+                            WorldPainter
+                        </a>
+                        <p class="description">
+                            WorldPainter is an interactive map generator for Minecraft Java Edition. It allows you to "paint" landscapes using similar tools as a regular paint program. Sculpt and mould the terrain, paint materials, trees, snow and ice, etc. onto it, and much more.
+                        </p>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://mega.nz/file/9bkFmSrL#EQE5k78h5HmuQTo0JIFKaenAB7EhCliHQ6rbgxWdt8Y" target="_blank" rel="noopener noreferrer">
+                            Snappy Driver Installer Origin R712 Driverpack 20052 - [CrackzSoft]
+                        </a>
+                        <p class="description">
+                            Use this if you are installing Old Windows Versions on Old Hardware
+                        </p>
+                    </div>
                 </div>
-                <div class="download-box">
-                    <a href="https://workupload.com/file/M7zpKsE8mmL" target="_blank" rel="noopener noreferrer">
-                        [Discontinued] CityBuild
-                    </a>
-                    <p class="description">
-                        German CityBuild Server Template based on 1.21.X with a 100% AutoUpdater for Plugins + Serversoftware
-                    </p>
-                </div>
-                <div class="download-box">
-                    <a href="https://discordtemplates.me/users/587341983396397066" target="_blank" rel="noopener noreferrer">
-                        Discord Server
-                    </a>
-                    <p class="description">
-                        Discord Server Templates powered by ME
-                    </p>
-                </div>
-                <div class="download-box">
-                    <a href="https://pastebin.com/raw/xZZ0JmDQ" target="_blank" rel="noopener noreferrer">
-                        Discord Rules
-                    </a>
-                    <p class="description">
-                        Premade Rules for My Discord Server Templates
-                    </p>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="resource-packs" class="section">
-            <h2>Resource Packs</h2>
-            <div class="download-container">
-                <div class="download-box">
-                    <a href="https://github.com/citypvp/citypvp.github.io/raw/refs/heads/main/files/CityPack.zip" target="_blank" rel="noopener noreferrer">
-                        CityPvP Java
-                    </a>
-                    <p class="description">
-                        CityPvP.de Server Resource Pack (for manual Download)
-                    </p>
+            <section id="collections" class="section">
+                <h2>Collections</h2>
+                <div class="download-container">
+                    <div class="download-box">
+                        <a href="https://workupload.com/file/4Pt4XaUgW93" target="_blank" rel="noopener noreferrer">
+                            Proxy Server Jars v7
+                        </a>
+                        <p class="description">
+                            Proxy & Server Jars Collection
+                        </p>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://workupload.com/file/7X6QVzdfvnt" target="_blank" rel="noopener noreferrer">
+                            Crasher Collection
+                        </a>
+                        <p class="description">
+                            Collection of Old Outgame Crash Methods (Use at own Risk)
+                        </p>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://mega.nz/folder/P0s21Bia#1Q35Ksde5KV6fvbcH2mHYA/folder/js8gXbAR" target="_blank" rel="noopener noreferrer">
+                            GrafVillainous Collection
+                        </a>
+                        <p class="description">
+                            All Old Clients, Plugins & Lost 1.8 Trash from My Past - Archive by EuGaming
+                        </p>
+                    </div>
                 </div>
-                <div class="download-box">
-                    <a href="https://www.mediafire.com/file/27bdxxhegh8s50f/FemPack.zip/file" target="_blank" rel="noopener noreferrer">
-                        FemPack Java
-                    </a>
-                    <p class="description">
-                        My Resource Pak with all CityPvP Custom Items (Means CityPack not needed anymore)
-                    </p>
-                </div>
-                <div class="download-box">
-                    <a href="https://raw.githubusercontent.com/citypvp/citypvp.github.io/refs/heads/main/files/CityPack.mcpack" target="_blank" rel="noopener noreferrer">
-                        CityPack Bedrock (ALPHA)
-                    </a>
-                    <p class="description">
-                        CityPvP.de Server Resource Pack for Bedrock Players
-                    </p>
-                </div>
-                <div class="download-box">
-                    <a href="https://download.geysermc.org/v2/projects/geyseroptionalpack/versions/latest/builds/latest/downloads/geyseroptionalpack" target="_blank" rel="noopener noreferrer">
-                        Geyser Optional Pack
-                    </a>
-                    <p class="description">
-                        GeyserOptionalPack is a Bedrock resource pack that adds more features to Geyser to bring Bedrock Edition in line with Java Edition.
-                    </p>
-                </div>
-            </div>
-        </section>
-    </div>
-    
-    <footer>
-        <p>© 2025 CityPvP.DE</p>
-    </footer>
+            </section>
 
-	<script src="Titlewechsler.js" type="text/javascript"></script>
-	<script src="background.js" type="text/javascript"></script>
-</body>
+            <section id="misc" class="section">
+                <h2>Misc</h2>
+                <div class="download-container">
+                    <div class="download-box">
+                        <a href="https://drive.google.com/drive/folders/19xgQm7LQxiDw5ApK9UHt5LzGdM9XmxEc" target="_blank" rel="noopener noreferrer">
+                            SoundPack
+                        </a>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://workupload.com/file/XuPDLBQKA4h" target="_blank" rel="noopener noreferrer">
+                            Arkonius SoundPack
+                        </a>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://codeload.github.com/cymbycode/Discord-Emojis-Stickers/zip/refs/heads/main" target="_blank" rel="noopener noreferrer">
+                            Discord Emojis & Stickers
+                        </a>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://mega.nz/folder/rcVQ3KhL#Gxt6r9XE17oxjnVYsmFsFA" target="_blank" rel="noopener noreferrer">
+                            Beweise
+                        </a>
+                    </div>
+                </section>
+
+            <section id="server-templates" class="section">
+                <h2>Server Templates</h2>
+                <div class="download-container">
+                    <div class="download-box">
+                        <a href="https://www.mediafire.com/file/653zgsfrehwcecc/Enchanted_FreeBuild_Server_Template.zip/file" target="_blank" rel="noopener noreferrer">
+                            FreeBuild
+                        </a>
+                        <p class="description">
+                            German Enchanted FreeBuild Server Template based on 1.18.2 with 1.4.7 Backwards Support & Slimefun
+                        </p>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://www.mediafire.com/file/7rkzf4vglp4j97s/GrieferGames-1.14.4.zip/file" target="_blank" rel="noopener noreferrer">
+                            GrieferGames
+                        </a>
+                        <p class="description">
+                            GrieferGames CB1 Server Template based on 1.14.4 with 1.4.7 Backwards Support
+                        </p>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://www.mediafire.com/file/k6g63lnon8g5xb2/OldDays.zip/file" target="_blank" rel="noopener noreferrer">
+                            OldDays
+                        </a>
+                        <p class="description">
+                            A Server Template that aims to replicate all of Minecraft beta mechanics and gameplay.
+                        </p>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://workupload.com/file/M7zpKsE8mmL" target="_blank" rel="noopener noreferrer">
+                            [Discontinued] CityBuild
+                        </a>
+                        <p class="description">
+                            German CityBuild Server Template based on 1.21.X with a 100% AutoUpdater for Plugins + Serversoftware
+                        </p>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://discordtemplates.me/users/587341983396397066" target="_blank" rel="noopener noreferrer">
+                            Discord Server
+                        </a>
+                        <p class="description">
+                            Discord Server Templates powered by ME
+                        </p>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://pastebin.com/raw/xZZ0JmDQ" target="_blank" rel="noopener noreferrer">
+                            Discord Rules
+                        </a>
+                        <p class="description">
+                            Premade Rules for My Discord Server Templates
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="resource-packs" class="section">
+                <h2>Resource Packs</h2>
+                <div class="download-container">
+                    <div class="download-box">
+                        <a href="https://github.com/citypvp/citypvp.github.io/raw/refs/heads/main/files/CityPack.zip" target="_blank" rel="noopener noreferrer">
+                            CityPvP Java
+                        </a>
+                        <p class="description">
+                            CityPvP.de Server Resource Pack (for manual Download)
+                        </p>
+                    </div>
+                    <div class="download-box">
+                        <a href="https://www.mediafire.com/file/27bdxxhegh8s50f/FemPack.zip/file" target="_blank" rel="noopener noreferrer">
+                            FemPack Java
+                        </a>
+                        <p class="description">
+                                My Resource Pack with all CityPvP Custom Items (Means CityPack not needed anymore)
+                            </p>
+                        </div>
+                        <div class="download-box">
+                            <a href="https://raw.githubusercontent.com/citypvp/citypvp.github.io/refs/heads/main/files/CityPack.mcpack" target="_blank" rel="noopener noreferrer">
+                                CityPack Bedrock (ALPHA)
+                            </a>
+                            <p class="description">
+                                CityPvP.de Server Resource Pack for Bedrock Players
+                            </p>
+                        </div>
+                        <div class="download-box">
+                            <a href="https://download.geysermc.org/v2/projects/geyseroptionalpack/versions/latest/builds/latest/downloads/geyseroptionalpack" target="_blank" rel="noopener noreferrer">
+                                Geyser Optional Pack
+                            </a>
+                            <p class="description">
+                                GeyserOptionalPack is a Bedrock resource pack that adds more features to Geyser to bring Bedrock Edition in line with Java Edition.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <footer>
+                <p>© 2025 CityPvP.DE</p>
+            </footer>
+        </div>
+
+        <script src="js/Titlewechsler.js" type="text/javascript"></script>
+        <script src="js/background.js" type="text/javascript"></script>
+        <script src="js/overlay.js" type="text/javascript"></script>
+    </body>
 </html>
