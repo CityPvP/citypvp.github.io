@@ -238,7 +238,7 @@
     function copyAndFeedback(element, text) {
         navigator.clipboard.writeText(text).then(() => {
             const original = element.innerHTML;
-            element.innerHTML = 'In Zwischenablage kopiert';
+            element.innerHTML = 'Kopiert';
             element.classList.add('copied');
             setTimeout(() => {
                 element.innerHTML = original;
