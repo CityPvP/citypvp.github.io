@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="apple-mobile-web-app-title" content="CityPvP.DE">
+    <meta name="application-name" content="CityPvP.DE">
+    <meta name="description" content="CityPvP.DE - Der beste CityBuild Server Deutschlands mit FemCraft Client">
+    <meta name="author" content="CityPvP.DE">
+    <meta name="url" content="https://citypvp.de">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#5865F2">
+    <meta property="og:title" content="CityPvP.DE - CityBuild Revolution">
+    <meta property="og:description" content="Der beste CityBuild Server Deutschlands - jetzt mit FemCraft Client!">
+    <meta property="og:image" content="https://static.planetminecraft.com/files/image/minecraft/server/2025/174/18778898_xl.webp">
+    <meta property="og:url" content="https://citypvp.de">
+    <meta property="og:type" content="website">
+
+    <title>CityPvP.DE - Home</title>
+    <link rel="icon" href="./favicon.png" type="image/png">
+
+    <!-- CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/util.css" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        body, html { cursor: url(./cur1003.cur), auto; }
+        .discord-widget { position: absolute; top: 20px; left: 20px; z-index: 1000; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.6); }
+
+        /* GLAS */
+        .glass {
+            background: rgba(255, 255, 255, 0.09);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+            transition: all 0.4s ease;
+        }
+        .glass:hover {
+            background: rgba(255, 255, 255, 0.16);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+        }
+
+        /* FemCraft Button oben rechts */
+        .femcraft-top-btn {
+            border-radius: 50px;
+            padding: 12px 26px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+        .femcraft-top-btn img {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+
+        /* IP Box – ULTRA CLEAN */
+        .ip-box {
+            border-radius: 28px;
+            padding: 40px 48px;
+            max-width: 560px;
+            text-align: center;
+        }
+
+        .edition-label {
+            font-size: 2.3rem !important;
+            font-weight: 900 !important;
+            margin: 28px 0 16px 0 !important;
+            display: block;
+            text-shadow: 0 0 25px rgba(0,0,0,0.8);
+        }
+        .java-label { color: #00ff88 !important; }
+        .bedrock-label { color: #00d0ff !important; }
+
+        /* KOPIERBARE TEXTFELDER – KEINE BUTTONS MEHR */
+        .copy-text {
+            background: rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+            padding: 20px 32px;
+            border-radius: 18px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 2.1rem !important;
+            font-weight: 900;
+            display: inline-block;
+            min-width: 380px;
+            margin: 12px 0;
+            letter-spacing: 2px;
+            border: 2px solid rgba(255,255,255,0.25);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+            cursor: pointer;
+            transition: all 0.4s ease;
+            user-select: none;
+        }
+        .copy-text:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(88, 101, 242, 0.8);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(88, 101, 242, 0.4);
+        }
+        .copy-text.copied {
+            background: rgba(67, 181, 129, 0.6) !important;
+            border-color: #43B581 !important;
+            color: #ffffff !important;
+        }
+
+        .port-text {
+            font-size: 1.6rem;
+            color: #00d0ff;
+            font-weight: 800;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .vote-btn {
+            background: rgba(67, 181, 129, 0.25);
+            backdrop-filter: blur(12px);
+            color: white;
+            border: 1px solid rgba(67, 181, 129, 0.5);
+            padding: 20px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.5rem;
+            display: inline-block;
+            margin-top: 40px;
+            transition: all 0.5s;
+            box-shadow: 0 10px 30px rgba(67, 181, 129, 0.4);
+        }
+        .vote-btn:hover {
+            background: rgba(67, 181, 129, 0.6);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(67, 181, 129, 0.7);
+        }
+    </style>
+
+    <script>
+        const title = document.title;
+        const alttitle = "CityPvP.DE - Wartet auf dich!";
+        window.onblur = () => document.title = alttitle;
+        window.onfocus = () => document.title = title;
+    </script>
+</head>
+<body>
+
+<!-- Slideshow -->
+<div class="simpleslide100">
+    <div class="simpleslide100-item bg-img1" style="background-image: url('https://static.planetminecraft.com/files/image/minecraft/server/2025/174/18778898_xl.webp');"></div>
+    <div class="simpleslide100-item bg-img1" style="background-image: url('https://static.planetminecraft.com/files/image/minecraft/server/2025/174/18778896_xl.webp'); display: none;"></div>
+    <div class="simpleslide100-item bg-img1" style="background-image: url('https://static.planetminecraft.com/files/image/minecraft/server/2025/174/18810538_xl.webp'); display: none;"></div>
+    <div class="simpleslide100-item bg-img1" style="background-image: url('https://static.planetminecraft.com/files/image/minecraft/server/2025/174/18778897_l.webp'); display: none;"></div>
+    <div class="simpleslide100-item bg-img1" style="background-image: url('https://static.planetminecraft.com/files/image/minecraft/server/2025/174/18778900_xl.webp'); display: none;"></div>
+    <div class="simpleslide100-item bg-img1" style="background-image: url('https://static.planetminecraft.com/files/image/minecraft/server/2025/174/18810540_xl.webp'); display: none;"></div>
+</div>
+
+<!-- Discord Widget -->
+<div class="discord-widget">
+    <iframe src="https://discord.com/widget?id=797188068347740160&theme=dark"
+            width="350" height="500" allowtransparency="true" frameborder="0"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+</div>
+
+<div class="flex-col-c-sb size1 overlay1 p-l-75 p-lr-15-sm p-t-20 p-b-40">
+
+    <!-- FemCraft Button oben rechts -->
+    <div class="w-full flex-w flex-sb-m">
+        <div></div>
+        <div class="m-t-10 m-b-10">
+            <a href="https://modrinth.com/modpack/femcraftclient" target="_blank" class="femcraft-top-btn glass">
+                <img src="https://cdn.modrinth.com/data/pEWDDouk/f1bacb9cbd9fbd8ef386b60833357f1cf8ee34bd_96.webp" alt="FemCraft">
+                <span>FemCraft Client</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Mitte: ULTRA CLEAN IP BOX -->
+    <div class="flex-col-c-m p-l-15 p-r-15 p-t-80 p-b-50">
+        <h3 class="l1-txt2 txt-center p-b-20 respon1" style="font-size: 5.6rem; text-shadow: 0 0 45px rgba(0,0,0,0.95);">
+            CityPvP.DE
+        </h3>
+        <p class="l1-txt1 txt-center p-b-50" style="font-size: 1.95rem; color: #fff; text-shadow: 0 4px 22px rgba(0,0,0,0.9);">
+            Der beste CityBuild Server Deutschlands
+        </p>
+
+        <div class="ip-box glass">
+
+            <!-- JAVA -->
+            <div class="edition-label java-label">Java Edition</div>
+            <div class="copy-text" onclick="copyAndFeedback(this, 'CityPvP.DE')">
+                CityPvP.DE
+            </div>
+
+            <!-- BEDROCK + PORT -->
+            <div class="edition-label bedrock-label">Bedrock Edition</div>
+            <div class="copy-text" onclick="copyAndFeedback(this, 'PE.CityPvP.DE')">
+                PE.CityPvP.DE
+            </div>
+            <div class="port-text" onclick="copyAndFeedback(this, '19490')">
+                Port: <strong>19490</strong>
+            </div>
+
+            <a href="https://www.planetminecraft.com/server/city-pvp-de/" target="_blank" class="vote-btn glass">
+                Voten
+            </a>
+        </div>
+    </div>
+
+    <!-- Unten leer -->
+    <div class="flex-sb-m flex-w w-full p-b-40">
+        <div class="flex-w flex-c-m m-t-10 m-b-10"></div>
+    </div>
+</div>
+
+<!-- Musik -->
+<audio id="bgmusic" loop preload="auto">
+    <source src="./media/audio.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Scripts -->
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script src="./js/main.js"></script>
+<script>
+    // Musik
+    document.body.addEventListener('click', () => {
+        document.getElementById('bgmusic').play().catch(() => {});
+    }, { once: true });
+
+    // Kopieren mit "In Zwischenablage kopiert"
+    function copyAndFeedback(element, text) {
+        navigator.clipboard.writeText(text).then(() => {
+            const original = element.innerHTML;
+            element.innerHTML = 'In Zwischenablage kopiert';
+            element.classList.add('copied');
+            setTimeout(() => {
+                element.innerHTML = original;
+                element.classList.remove('copied');
+            }, 1800);
+        }).catch(() => {
+            alert('Kopiert: ' + text);
+        });
+    }
+</script>
+
+</body>
+</html>
